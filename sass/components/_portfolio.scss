@@ -1,0 +1,111 @@
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.portfolio__filter {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.filter__item {
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.filter__item {
+    
+    margin-bottom: 50px;
+}
+.filter__btn {
+    @include fonts(500, 16px, 1.62, 0.03em);
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
+    font-family: inherit;
+    cursor: pointer;
+    // font-weight: 500;
+    // font-size: 16px;
+    // line-height: 1.62;
+    text-align: center;
+    // letter-spacing: 0.03em;
+    background-color:var(--button-bg-color);
+    color: var(--main-button-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--second-button-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.projects {
+    display: flex;
+    margin-left: -30px;
+    margin-bottom: -30px;
+    list-style: none; 
+    flex-wrap: wrap;   
+}
+.projects__item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.projects__top-wrap {
+    position: relative;
+    overflow: hidden;}
+
+.projects__top-text {
+    @include fonts(null, 18px, 1.56, 0.03em);
+    position: absolute;
+    top: 0;
+    color: #FFFFFF;
+    background-color: rgba(33, 150, 243, 0.9);
+    // font-size: 18px;
+    // line-height: 1.56;
+    // letter-spacing: 0.03em;
+    padding: 63px 24px;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .projects__item:hover & {
+        transform: translateY(0);
+    }
+}
+
+.projects__item-wrap {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+}
+.projects__link {
+    text-decoration: none;
+    display: block;
+}
+
+.projects__title {    
+    @include fonts(null, 18px, 2, 0.06em);
+    margin-bottom: 4px;
+    // font-size: 18px;
+    // line-height: 2;
+    // letter-spacing: 0.06em;
+    color: var(--title-color);
+}
+.projects__text {
+    @include fonts(null, 16px, 1.88, 0.03em);
+    // font-size: 16px;
+    // line-height: 1.88;
+    // letter-spacing: 0.03em;
+    color: #757575;
+}
