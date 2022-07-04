@@ -13,7 +13,8 @@
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: flex-start;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+    gap: 15px 8px;
     @include tablet {
     justify-content: center;
     margin-bottom: 30px;
@@ -22,19 +23,6 @@
         justify-content: center;
         margin-bottom: 50px;
         }
-
-}
-.filter__item {
-margin-bottom: 15px;
-}
-
-.filter__item {
-    &:not(:last-child) {        
-        margin-right: 8px;
-        @include tablet {
-            margin-bottom: 0;
-        }
-    }
 }
 .filter__btn {
     @include fonts(500, 16px, 1.63, 0.03em);
@@ -63,6 +51,7 @@ margin-bottom: 15px;
     gap: 30px;   
 }
 .projects__item {
+    width: 100%;
     @include tablet {
         width: calc((100% - 30px) /2);
       }

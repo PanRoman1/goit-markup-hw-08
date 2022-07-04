@@ -782,7 +782,8 @@ img {
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: flex-start;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+  gap: 15px 8px;
 }
 @media screen and (min-width: 768px) {
   .portfolio__filter {
@@ -794,19 +795,6 @@ img {
   .portfolio__filter {
     justify-content: center;
     margin-bottom: 50px;
-  }
-}
-
-.filter__item {
-  margin-bottom: 15px;
-}
-
-.filter__item:not(:last-child) {
-  margin-right: 8px;
-}
-@media screen and (min-width: 768px) {
-  .filter__item:not(:last-child) {
-    margin-bottom: 0;
   }
 }
 
@@ -840,6 +828,7 @@ img {
 }
 
 .projects__item {
+  width: 100%;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   list-style: none;
