@@ -56,7 +56,7 @@
 }
 .modal-title {
     @include fonts(700, 20px, 1.5, 0.03em);
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     text-align: center;
     align-items: center;
     color: var(--title-color);
@@ -134,15 +134,14 @@
     margin-bottom: 30px;
 }
 .check-text {
-    @include fonts(400, 14px, 1.71, 0.03em);
-    // font-weight: 400;
-    // font-size: 14px;
-    // line-height: 1.71;
-    // letter-spacing: 0.03em;
+    @include fonts(400, 12px, 1.17, 0.03em);
     color: #757575;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include desktop {
+        @include fonts(null, 14px, 1.71, null);
+    }
     & span {
         width: 16px;
         height: 15px;
@@ -180,10 +179,6 @@
     height: 50px;
     border: none;
     border-radius: 4px;
-    // font-weight: 700;
-    // font-size: 16px;
-    // line-height: 1.88;
-    // letter-spacing: 0.06em;
     color: #FFFFFF;
     background-color: #2196F3;
     cursor: pointer;
