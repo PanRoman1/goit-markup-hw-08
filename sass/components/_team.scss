@@ -2,12 +2,8 @@
     background-color: #F5F4FA;
     padding-top: 60px;
     padding-bottom: 60px;
-    @media screen and (min-width: 768px) {
-        padding-top: 60px;
-        padding-bottom: 60px;
-      }
     
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         padding-top: 94px;
         padding-bottom: 94px;
         }
@@ -16,16 +12,12 @@
     @include fonts(null, 28px, 1.18, 0.03em);
     text-align: center;
     color: var(--title-color);
-    margin-bottom: 30px;
-    @media screen and (min-width: 768px) {
-        @include fonts(null, 28px, 1.18, 0.03em);
-      }
-    
-    @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;        
+    @include desktop {
         @include fonts(null, 36px, 1.17, null);
+        margin-bottom: 50px;
         }
 }
-
 .team__cards {
     display: flex;
     flex-wrap: wrap;
@@ -33,13 +25,11 @@
 }
 .cards__item {
     list-style: none;
-    width: 100%;
-    
-    @media screen and (min-width: 768px) {
+    width: 100%;    
+    @include tablet {
         width: calc((100% - 30px) /2);
-      }
-    
-    @media screen and (min-width: 1200px) {
+      }    
+    @include desktop {
         width: calc((100% - 90px) /4);
         }
 }
@@ -49,11 +39,8 @@
     padding-bottom: 24px;
     border-radius: 4px;
     box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
-    @media screen and (min-width: 768px) {
-        padding-bottom: 24px;
-      }
-    
-    @media screen and (min-width: 1200px) {
+        
+    @include desktop {
         padding-bottom: 30px;
         }
 }

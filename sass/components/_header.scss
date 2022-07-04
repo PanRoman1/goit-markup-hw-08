@@ -1,10 +1,114 @@
 .header {
     background-color: #ffffff;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #ECECEC;
-    & .container {
+    @include tablet {
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+    @include tablet {
+      padding-top: 24px;
+      padding-bottom: 25px;
+    }
+    > .container {
       display: flex;
-      align-items: center;  
+      align-items: center;
+    }
+}
+
+.menu-open-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+  border: none;
+  &:hover, &:focus {
+    fill: var(--accent-color);
   }
+  @include tablet {
+    display: none;
+  }
+}
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+  border: none;
+  &:hover, &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 0 48px;
+  & .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+.mob-menu-list {
+  list-style: none;
+  margin-bottom: 32px;
+}
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-menu-link {
+  @include fonts (500, 40px, 1.175, 0.02em);
+  color: #212121;
+  text-decoration: none;
+  transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+    &.curent {
+        color: var(--accent-color);
+}
+}
+.mob-contacts {
+  list-style: none;
+}
+.mob-contacts-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-tel-link {
+  @include fonts (500, 34px, 1.176, 0.02em);
+  color: #2196F3;
+  text-decoration: none;
+}
+.mob-mail-link {
+  @include fonts (500, 24px, 1.17, 0.02em);
+  color: #757575;
+  text-decoration: none;
+}
+
+.mob-soc-list {  
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  margin-top: 64px;
+}
+
+.mob-soc-link {
+  @include fonts (500, 18px, 1.22, 0.02em);
+  color: #2196F3;
+  text-decoration: none;
 }

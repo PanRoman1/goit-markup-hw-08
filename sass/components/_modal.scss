@@ -7,7 +7,8 @@
     transition: opacity 250ms, visibility 250ms;
 }
 .modal {
-    width: 528px;
+    width: 450px;
+    min-height: 609px;
     min-height: 581px;
     background-color: #ffffff;
     border-radius: 4px;
@@ -19,6 +20,10 @@
     transition: transform 250ms;
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0);
+    }
+    @include desktop {
+        width: 528px;
+        min-height: 581px;
     }
 }
 .modal-close-btn {
@@ -45,24 +50,18 @@
 }
 .modal-label {
     @include fonts(400, 12px, 1.17, 0.01em);
-    // font-weight: 400;
-    // font-size: 12px;
-    // line-height: calc(14 / 12);
-    // letter-spacing: 0.01em;
     color: #757575;
     display: block;
     margin-bottom: 4px;
 }
 .modal-title {
-    @include fonts(700, 20px, 1.15, 0.03em);
+    @include fonts(700, 20px, 1.5, 0.03em);
     margin-bottom: 30px;
-    // font-size: 20px;
-    // font-weight: 700;
-    // line-height: calc(23 /20);
     text-align: center;
     align-items: center;
-    // letter-spacing: 0.03em;
     color: var(--title-color);
+    @include desktop {
+        @include fonts(null, null, 1.15, null);}
 }
 
 .modal-input {
